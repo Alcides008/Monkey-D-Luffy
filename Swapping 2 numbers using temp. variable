@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main () {
+  int a,b,c;
+  
+  printf("Enter 1st no.\n");
+  scanf("%d",&a);
+  
+  printf("Enter the 2nd no. \n");
+  scanf ("%d",&b);
+  
+  c=a;
+  a=b;
+  b=c;
+  
+  printf("The new 1st no. is %d \n", a);
+  printf("The new 2nd no. is %d \n", b);
+    return 0;
+}
