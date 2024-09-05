@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main () {
+    float num1,num2,addition,subtract,multiplication,division;
+    printf("Enter 1st number\n");
+    scanf("%f", &num1);
+    
+    printf("Enter 2nd numnber\n");
+    scanf("%f",&num2);
+    
+    addition=num1+num2;
+    printf("The addition is %f \n",addition);
+    
+    subtract=num2-num1;
+      printf("The subtraction is %f \n",subtract);
+    
+    multiplication=num1*num2;
+    printf("The multiplication is %f \n",multiplication);
+    
+    division=num1/num2;
+    printf("The division is %f \n",division);
+    return 0;
+}
