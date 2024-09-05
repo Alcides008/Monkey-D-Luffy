@@ -1,0 +1,5 @@
+#include <stdio.h>
+int main () {
+    printf("Konnichiwa Earth\n");
+    return 0;
+}
