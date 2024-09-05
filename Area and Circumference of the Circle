@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+int main () {
+    float radius,Area,Circumference;
+    printf("Enter the radius\n");
+    scanf("%f", &radius);
+    
+    Area= M_PI *radius *radius ;
+    printf("The area is %f \n",Area);
+    
+   Circumference = 2*M_PI*radius;
+      printf("The Circumference is %f \n",Circumference);
+    
+    return 0;
+}
