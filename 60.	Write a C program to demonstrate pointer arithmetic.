@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int *ptr = arr;
+
+    printf("Using pointer arithmetic:\n");
+
+    printf("First element: %d\n", *ptr);
+    printf("Second element: %d\n", *(ptr + 1));
+    printf("Third element: %d\n", *(ptr + 2));
+
+    ptr++;
+    printf("After incrementing pointer, second element: %d\n", *ptr);
+
+    ptr += 2;
+    printf("After incrementing pointer by 2, fourth element: %d\n", *ptr);
+
+    int *endPtr = arr + 4;
+    printf("Difference between end pointer and start pointer: %ld\n", endPtr - ptr);
+
+    return 0;
+}
