@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int arithmeticSum(int firstTerm, int commonDifference, int n) {
+    return (n / 2) * (2 * firstTerm + (n - 1) * commonDifference);
+}
+
+int main() {
+    int firstTerm, commonDifference, n;
+
+    printf("Enter the first term: ");
+    scanf("%d", &firstTerm);
+
+    printf("Enter the common difference: ");
+    scanf("%d", &commonDifference);
+
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    int sum = arithmeticSum(firstTerm, commonDifference, n);
+
+    printf("The sum of the arithmetic series is: %d\n", sum);
+
+    return 0;
+}
