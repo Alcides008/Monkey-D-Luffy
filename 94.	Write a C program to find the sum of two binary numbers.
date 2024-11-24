@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+
+void addBinary(char a[], char b[], char result[]) {
+    int i, j, carry = 0, k;
+    int lenA = strlen(a);
+    int lenB = strlen(b);
+
+    k = (lenA > lenB) ? lenA : lenB;
+    result[k] = '\0';
+
+    i = lenA - 1;
+    j = lenB - 1;
+    k--;
+
+    while (i >= 0 || j >= 0 || carry) {
+        int sum = carry;
+        if (i >= 0) {
+            sum += a[i] - '0';
+            i--;
+        }
+        if (j >= 0) {
+            sum += b[j] - '0';
+            j--;
+        }
+
+        result[k] = (sum % 2) + '0';
+        carry = sum / 2;
+        k--;
+    }
+}
+
+int main() {
+    char a[100], b[100], result[101];
+
+    printf("Enter first binary number: ");
+    scanf("%s", a);
+
+    printf("Enter second binary number: ");
+    scanf("%s", b);
+
+    addBinary(a, b, result);
+
+    printf("Sum of the two binary numbers: %s\n", result);
+
+    return 0;
+}
