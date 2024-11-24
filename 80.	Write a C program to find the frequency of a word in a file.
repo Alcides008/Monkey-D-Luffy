@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_WORD_LENGTH 100
+
+int main() {
+    FILE *file;
+    char word[MAX_WORD_LENGTH], temp[MAX_WORD_LENGTH];
+    int count = 0;
+
+    printf("Enter the word to search: ");
+    scanf("%s", word);
+
+    file = fopen("example.txt", "r");
+    if (file == NULL) {
+        printf("Could not open file.\n");
+        return 1;
+    }
+
+    while (fscanf(file, "%s", temp) != EOF) {
+        if (strcmp(temp, word) == 0) {
+            count++;
+        }
+    }
+
+    fclose(file);
+
+    printf("The word '%s' appears %d times in the file.\n", word, count);
+
+    return 0;
+}
